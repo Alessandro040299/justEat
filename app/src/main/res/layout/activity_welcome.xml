@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/welcome"
+        android:textAlignment="textStart"
+        android:textSize="20dp"
+        android:layout_above="@+id/food_rv"
+        android:id="@+id/welcome_tv"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20dp"
+
+        android:textAlignment="center"
+        android:id="@+id/welcome_email_ed"
+        />
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_email_ed"
+        android:layout_above="@+id/bottom_rl"
+        android:id="@+id/food_rv"
+        android:layout_margin="3dp"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_rl"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/total_string"
+            android:text="@string/total"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/total_shop"
+            android:layout_toRightOf="@+id/total_string"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="0.0"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/euro"
+            android:textSize="20dp"
+            android:id="@+id/euro_symbol"
+            android:layout_toRightOf="@+id/total_shop"
+            android:layout_above="@+id/buy_btn" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buy_btn"
+            android:textAlignment="center"
+            android:layout_below="@+id/total_shop"
+            android:enabled="false"
+            android:text="@string/buy"
+            />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
